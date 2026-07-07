@@ -3,13 +3,16 @@
 A Python-based cybersecurity project that scans Indicators of Compromise (IOCs) such as IP addresses, domains, URLs, and file hashes.
 
 ## Current Features
+## Threat Intelligence Integration
 
-- IOC input handling
-- IP address detection
-- Domain detection
-- URL detection
-- File hash detection
-- Basic IOC validation
+The scanner integrates with VirusTotal API to:
+
+- Analyze IP addresses
+- Retrieve threat intelligence data
+- Classify indicators as:
+  - Clean
+  - Suspicious
+  - Malicious
 
 ## Planned Features
 
