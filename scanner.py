@@ -3,20 +3,18 @@ from ioc_parser import identify_ioc_type
 
 def main():
 
-    test_iocs = [
-        "8.8.8.8",
-        "google.com",
-        "https://example.com",
-        "44d88612fea8a8f36de82e1278abb02f"
-    ]
+    print("======================")
+    print(" IOC Scanner tool")
+    print("======================")
 
+    ioc = input("Enter IOC: ")
 
-    for ioc in test_iocs:
+    result = identify_ioc_type(ioc)
 
-        result = identify_ioc_type(ioc)
-
-        print(f"{ioc} --> {result}")
-
+    print("\nResults")
+    print("----------------")
+    print("IOC:", ioc)
+    print("Type:", result)
 
 
 if __name__ == "__main__":
