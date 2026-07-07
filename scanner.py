@@ -1,20 +1,25 @@
-from ioc_parser import identify_ioc_type
+from threat_intel import check_ip, analyze_result
 
 
 def main():
 
-    print("======================")
-    print(" IOC Scanner tool")
-    print("======================")
+    ip = input("Enter IP address: ")
 
-    ioc = input("Enter IOC: ")
+    print("\nScanning IOC...")
+    
+    result = check_ip(ip)
 
-    result = identify_ioc_type(ioc)
+    analysis = analyze_result(result)
 
-    print("\nResults")
-    print("----------------")
-    print("IOC:", ioc)
-    print("Type:", result)
+
+    print("\n===== IOC Scan Report =====")
+
+    print("IOC:", ip)
+    print("Status:", analysis["status"])
+    print("Malicious detections:", analysis["malicious"])
+    print("Suspicious detections:", analysis["suspicious"])
+    print("Clean engines:", analysis["harmless"])
+
 
 
 if __name__ == "__main__":
