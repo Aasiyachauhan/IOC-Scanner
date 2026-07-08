@@ -1,0 +1,10 @@
+[
+    {
+        "ioc": "109.68.67.0",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 56,
+        "timestamp": "2026-07-08 00:56:45"
+    }
+]
