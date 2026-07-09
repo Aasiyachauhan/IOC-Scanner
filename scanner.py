@@ -1,32 +1,33 @@
 from threat_intel import check_ip, analyze_result
 from logger import save_result
+from ioc_reader import read_iocs
 
 
 def main():
 
-    ip = input("Enter IP address: ")
-
-    print("\nScanning IOC...")
-
-    # Step 1: Get threat intelligence data from VirusTotal
-    result = check_ip(ip)
-
-    # Step 2: Analyze VirusTotal response
-    analysis = analyze_result(result)
-
-    # Step 3: Save scan result into JSON log file
-    save_result(ip, analysis)
+    iocs = read_iocs("sample_IOCs.txt")
 
 
-    print("\n===== IOC Scan Report =====")
+    for ioc in iocs:
 
-    print("IOC:", ip)
-    print("Status:", analysis["status"])
-    print("Malicious detections:", analysis["malicious"])
-    print("Suspicious detections:", analysis["suspicious"])
-    print("Clean engines:", analysis["harmless"])
+        print("\nScanning:", ioc)
 
-    print("\nScan result saved successfully!")
+
+        result = check_ip(ioc)
+
+        analysis = analyze_result(result)
+
+
+        save_result(ioc, analysis)
+
+
+        print("--------------------")
+        print("IOC:", ioc)
+        print("Status:", analysis["status"])
+        print("Malicious:", analysis["malicious"])
+        print("Suspicious:", analysis["suspicious"])
+        print("--------------------")
+
 
 
 if __name__ == "__main__":
