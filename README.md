@@ -1,7 +1,6 @@
 # IOC Scanner & Threat Intelligence Checker
 
 A Python-based cybersecurity automation tool that analyzes Indicators of Compromise (IOCs) such as IP addresses, URLs, domains, and file hashes.
-
 The project integrates with VirusTotal API to perform threat intelligence lookups, classify security risks, and store scan results for investigation and reporting.
 
 ---
@@ -12,7 +11,7 @@ The project integrates with VirusTotal API to perform threat intelligence lookup
 
 The scanner integrates with the VirusTotal API to:
 
-- Analyze IP addresses
+- Analyze IOCs
 - Retrieve threat intelligence information
 - Collect antivirus detection statistics
 - Identify malicious and suspicious indicators
@@ -42,3 +41,23 @@ The project includes automated logging functionality:
 Example log file:
 logs/
 └── scan_results.json
+
+## Batch IOC Scanning
+
+The scanner supports scanning multiple IOCs from a file instead of entering one IOC manually.
+This allows faster investigation of multiple indicators, similar to SOC analyst workflows.
+
+# Usage
+
+Add IOCs to sample_IOCs.txt
+
+Run:
+```bash
+python scanner.py
+```
+
+Results are saved automatically:
+```bash
+logs/scan_results.json
+```
+
