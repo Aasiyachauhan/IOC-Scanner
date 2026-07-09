@@ -6,5 +6,45 @@
         "suspicious": 0,
         "harmless": 56,
         "timestamp": "2026-07-08 00:56:45"
+    },
+    {
+        "ioc": "8.8.8.8",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 54,
+        "timestamp": "2026-07-09 00:41:45"
+    },
+    {
+        "ioc": "1.1.1.1",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 57,
+        "timestamp": "2026-07-09 00:41:46"
+    },
+    {
+        "ioc": "8.8.8.8",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 54,
+        "timestamp": "2026-07-09 00:42:49"
+    },
+    {
+        "ioc": "1.1.1.1",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 57,
+        "timestamp": "2026-07-09 00:42:50"
+    },
+    {
+        "ioc": "8.8.4.4",
+        "status": "Suspicious",
+        "malicious": 2,
+        "suspicious": 0,
+        "harmless": 55,
+        "timestamp": "2026-07-09 00:42:51"
     }
 ]
