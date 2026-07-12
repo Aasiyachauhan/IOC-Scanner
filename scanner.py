@@ -1,4 +1,4 @@
-from threat_intel import check_ip, analyze_result
+from threat_intel import analyze_result
 from logger import save_result
 from ioc_reader import read_iocs
 from ioc_router import scan_ioc
@@ -13,8 +13,14 @@ def main():
 
         print("\nScanning:", ioc)
 
-
         result = scan_ioc(ioc)
+
+
+        if "data" not in result:
+            print("Unable to analyze:", ioc)
+            continue
+
+
         analysis = analyze_result(result)
 
 

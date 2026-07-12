@@ -78,5 +78,13 @@
         "suspicious": 0,
         "harmless": 54,
         "timestamp": "2026-07-11 22:33:13"
+    },
+    {
+        "ioc": "8.8.8.8",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 54,
+        "timestamp": "2026-07-11 22:37:56"
     }
 ]
