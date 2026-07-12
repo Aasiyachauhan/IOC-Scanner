@@ -7,45 +7,56 @@ The project integrates with VirusTotal API to perform threat intelligence lookup
 
 # Features
 
-## IOC Threat Intelligence Integration
+## Multi-IOC Threat Intelligence Analysis
 
-The scanner integrates with the VirusTotal API to:
+The scanner supports:
 
-- Analyze IOCs
-- Retrieve threat intelligence information
-- Collect antivirus detection statistics
-- Identify malicious and suspicious indicators
+- IP address analysis
+- URL analysis
+- Domain analysis
+- File hash analysis
+
+Using VirusTotal API, it retrieves:
+
+- Antivirus detection statistics
+- Threat intelligence information
+- Security reputation data
 
 ---
 
-## Threat Classification
+## IOC Classification
 
-The scanner analyzes VirusTotal results and classifies IOCs as:
+Each IOC is classified as:
 
 - Clean
 - Suspicious
 - Malicious
 
+based on VirusTotal detection results.
+
+
+---
+
+## Batch IOC Scanning
+
+The scanner can process multiple IOCs from a file: sample_IOCs.txt
+This allows faster investigation of multiple indicators, similar to SOC analyst workflows.
 
 ---
 
 ## Security Logging
 
-The project includes automated logging functionality:
-
-- Stores scan results in JSON format
-- Records IOC details
-- Saves threat classification results
-- Includes scan timestamps for investigation tracking
+Scan results are automatically stored in JSON format.
+Logs include:
+- IOC value
+- Threat classification
+- Malicious detections
+- Suspicious detections
+- Timestamp
 
 Example log file:
 logs/
 └── scan_results.json
-
-## Batch IOC Scanning
-
-The scanner supports scanning multiple IOCs from a file instead of entering one IOC manually.
-This allows faster investigation of multiple indicators, similar to SOC analyst workflows.
 
 # Usage
 
@@ -61,3 +72,9 @@ Results are saved automatically:
 logs/scan_results.json
 ```
 
+## Technologies Used
+- Python
+- Requests
+- VirusTotal API
+- JSON Logging
+- Regular Expressions
