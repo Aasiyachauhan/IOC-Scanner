@@ -86,5 +86,45 @@
         "suspicious": 0,
         "harmless": 54,
         "timestamp": "2026-07-11 22:37:56"
+    },
+    {
+        "ioc": "8.8.8.8",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 54,
+        "timestamp": "2026-07-11 22:46:47"
+    },
+    {
+        "ioc": "1.1.1.1",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 57,
+        "timestamp": "2026-07-11 22:46:48"
+    },
+    {
+        "ioc": "google.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 63,
+        "timestamp": "2026-07-11 22:46:48"
+    },
+    {
+        "ioc": "https://example.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 64,
+        "timestamp": "2026-07-11 22:46:49"
+    },
+    {
+        "ioc": "44d88612fea8a8f36de82e1278abb02f",
+        "status": "Malicious",
+        "malicious": 65,
+        "suspicious": 0,
+        "harmless": 0,
+        "timestamp": "2026-07-11 22:46:50"
     }
 ]
