@@ -1,6 +1,7 @@
 from threat_intel import check_ip, analyze_result
 from logger import save_result
 from ioc_reader import read_iocs
+from ioc_router import scan_ioc
 
 
 def main():
@@ -13,8 +14,7 @@ def main():
         print("\nScanning:", ioc)
 
 
-        result = check_ip(ioc)
-
+        result = scan_ioc(ioc)
         analysis = analyze_result(result)
 
 
