@@ -11,37 +11,48 @@ headers = {
 }
 
 
+def make_request(endpoint):
+
+    try:
+
+        response = requests.get(
+            f"{BASE_URL}/{endpoint}",
+            headers=headers,
+            timeout=10
+        )
+
+        return response.json()
+
+
+    except requests.exceptions.RequestException as e:
+
+        return {
+            "error": str(e)
+        }
+
+
 
 def check_ip(ip):
 
-    response = requests.get(
-        f"{BASE_URL}/ip_addresses/{ip}",
-        headers=headers
+    return make_request(
+        f"ip_addresses/{ip}"
     )
-
-    return response.json()
 
 
 
 def check_domain(domain):
 
-    response = requests.get(
-        f"{BASE_URL}/domains/{domain}",
-        headers=headers
+    return make_request(
+        f"domains/{domain}"
     )
-
-    return response.json()
 
 
 
 def check_hash(file_hash):
 
-    response = requests.get(
-        f"{BASE_URL}/files/{file_hash}",
-        headers=headers
+    return make_request(
+        f"files/{file_hash}"
     )
-
-    return response.json()
 
 
 
@@ -54,19 +65,18 @@ def check_url(url):
     ).decode().strip("=")
 
 
-    response = requests.get(
-        f"{BASE_URL}/urls/{url_id}",
-        headers=headers
+    return make_request(
+        f"urls/{url_id}"
     )
-
-
-    return response.json()
 
 
 
 def analyze_result(data):
 
+    # Handle API errors or invalid responses
+
     if "data" not in data:
+
         return {
             "status": "Unknown",
             "malicious": 0,
@@ -78,9 +88,9 @@ def analyze_result(data):
     stats = data["data"]["attributes"]["last_analysis_stats"]
 
 
-    malicious = stats.get("malicious",0)
-    suspicious = stats.get("suspicious",0)
-    harmless = stats.get("harmless",0)
+    malicious = stats.get("malicious", 0)
+    suspicious = stats.get("suspicious", 0)
+    harmless = stats.get("harmless", 0)
 
 
 

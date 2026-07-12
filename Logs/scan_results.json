@@ -126,5 +126,205 @@
         "suspicious": 0,
         "harmless": 0,
         "timestamp": "2026-07-11 22:46:50"
+    },
+    {
+        "ioc": "8.8.8.8",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 55,
+        "timestamp": "2026-07-12 00:33:04"
+    },
+    {
+        "ioc": "1.1.1.1",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 58,
+        "timestamp": "2026-07-12 00:33:06"
+    },
+    {
+        "ioc": "google.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 61,
+        "timestamp": "2026-07-12 00:33:06"
+    },
+    {
+        "ioc": "https://microsoft.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 62,
+        "timestamp": "2026-07-12 00:33:07"
+    },
+    {
+        "ioc": "44d88612fea8a8f36de82e1278abb02f",
+        "status": "Malicious",
+        "malicious": 65,
+        "suspicious": 0,
+        "harmless": 0,
+        "timestamp": "2026-07-12 00:33:08"
+    },
+    {
+        "ioc": "8.8.8.8",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 55,
+        "timestamp": "2026-07-12 00:33:19"
+    },
+    {
+        "ioc": "1.1.1.1",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 58,
+        "timestamp": "2026-07-12 00:33:19"
+    },
+    {
+        "ioc": "google.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 61,
+        "timestamp": "2026-07-12 00:33:20"
+    },
+    {
+        "ioc": "https://microsoft.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 62,
+        "timestamp": "2026-07-12 00:33:21"
+    },
+    {
+        "ioc": "44d88612fea8a8f36de82e1278abb02f",
+        "status": "Malicious",
+        "malicious": 65,
+        "suspicious": 0,
+        "harmless": 0,
+        "timestamp": "2026-07-12 00:33:22"
+    },
+    {
+        "ioc": "8.8.8.8",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 55,
+        "timestamp": "2026-07-12 00:34:50"
+    },
+    {
+        "ioc": "1.1.1.1",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 58,
+        "timestamp": "2026-07-12 00:34:55"
+    },
+    {
+        "ioc": "google.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 61,
+        "timestamp": "2026-07-12 00:35:02"
+    },
+    {
+        "ioc": "8.8.8.8",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 55,
+        "timestamp": "2026-07-12 00:35:33"
+    },
+    {
+        "ioc": "1.1.1.1",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 58,
+        "timestamp": "2026-07-12 00:35:34"
+    },
+    {
+        "ioc": "google.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 61,
+        "timestamp": "2026-07-12 00:35:34"
+    },
+    {
+        "ioc": "https://microsoft.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 62,
+        "timestamp": "2026-07-12 00:35:35"
+    },
+    {
+        "ioc": "44d88612fea8a8f36de82e1278abb02f",
+        "status": "Malicious",
+        "malicious": 65,
+        "suspicious": 0,
+        "harmless": 0,
+        "timestamp": "2026-07-12 00:35:36"
+    },
+    {
+        "ioc": "8.8.8.8",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 55,
+        "timestamp": "2026-07-12 00:36:49"
+    },
+    {
+        "ioc": "1.1.1.1",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 58,
+        "timestamp": "2026-07-12 00:36:49"
+    },
+    {
+        "ioc": "8.8.8.8",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 55,
+        "timestamp": "2026-07-12 00:38:52"
+    },
+    {
+        "ioc": "1.1.1.1",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 58,
+        "timestamp": "2026-07-12 00:38:52"
+    },
+    {
+        "ioc": "google.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 61,
+        "timestamp": "2026-07-12 00:38:53"
+    },
+    {
+        "ioc": "https://microsoft.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 62,
+        "timestamp": "2026-07-12 00:38:54"
+    },
+    {
+        "ioc": "44d88612fea8a8f36de82e1278abb02f",
+        "status": "Malicious",
+        "malicious": 64,
+        "suspicious": 0,
+        "harmless": 0,
+        "timestamp": "2026-07-12 00:38:54"
     }
 ]
