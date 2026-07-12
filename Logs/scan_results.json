@@ -446,5 +446,85 @@
         "suspicious": 0,
         "harmless": 0,
         "timestamp": "2026-07-12 00:52:08"
+    },
+    {
+        "ioc": "8.8.8.8",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 55,
+        "timestamp": "2026-07-12 00:53:50"
+    },
+    {
+        "ioc": "1.1.1.1",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 58,
+        "timestamp": "2026-07-12 00:53:51"
+    },
+    {
+        "ioc": "google.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 62,
+        "timestamp": "2026-07-12 00:53:55"
+    },
+    {
+        "ioc": "https://microsoft.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 61,
+        "timestamp": "2026-07-12 00:53:57"
+    },
+    {
+        "ioc": "44d88612fea8a8f36de82e1278abb02f",
+        "status": "Malicious",
+        "malicious": 65,
+        "suspicious": 0,
+        "harmless": 0,
+        "timestamp": "2026-07-12 00:53:57"
+    },
+    {
+        "ioc": "8.8.8.8",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 55,
+        "timestamp": "2026-07-12 00:55:28"
+    },
+    {
+        "ioc": "1.1.1.1",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 58,
+        "timestamp": "2026-07-12 00:55:29"
+    },
+    {
+        "ioc": "google.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 62,
+        "timestamp": "2026-07-12 00:55:29"
+    },
+    {
+        "ioc": "https://microsoft.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 61,
+        "timestamp": "2026-07-12 00:55:30"
+    },
+    {
+        "ioc": "44d88612fea8a8f36de82e1278abb02f",
+        "status": "Malicious",
+        "malicious": 65,
+        "suspicious": 0,
+        "harmless": 0,
+        "timestamp": "2026-07-12 00:55:31"
     }
 ]

@@ -3,6 +3,7 @@ from logger import save_result
 from ioc_reader import read_iocs
 from ioc_router import scan_ioc
 from ioc_parser import identify_ioc_type
+from datetime import datetime
 
 
 def main():
@@ -12,11 +13,7 @@ def main():
 
     for ioc in iocs:
 
-        print("\nScanning:", ioc)
-
         ioc_type = identify_ioc_type(ioc)
-
-        print("IOC Type:", ioc_type)
 
 
         result = scan_ioc(ioc)
@@ -24,13 +21,26 @@ def main():
 
         if "error" in result:
 
-            print("Scan Error:", result["error"])
+            print("\n=========================")
+            print("IOC Scan Report")
+            print("=========================")
+            print("Indicator:")
+            print(ioc)
+            print("\nScan Error:")
+            print(result["error"])
+            print("=========================")
             continue
 
 
         if "data" not in result:
 
-            print("Unable to analyze:", ioc)
+            print("\n=========================")
+            print("IOC Scan Report")
+            print("=========================")
+            print("Indicator:")
+            print(ioc)
+            print("\nUnable to analyze IOC")
+            print("=========================")
             continue
 
 
@@ -40,14 +50,42 @@ def main():
         save_result(ioc, analysis)
 
 
-        print("--------------------")
-        print("IOC:", ioc)
-        print("Type:", ioc_type)
-        print("Status:", analysis["status"])
-        print("Malicious:", analysis["malicious"])
-        print("Suspicious:", analysis["suspicious"])
-        print("Harmless:", analysis["harmless"])
-        print("--------------------")
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+
+        print("\n=========================")
+        print("IOC Scan Report")
+        print("=========================")
+
+        print("\nIndicator:")
+        print(ioc)
+
+
+        print("\nType:")
+        print(ioc_type)
+
+
+        print("\nRisk:")
+        print(analysis["status"])
+
+
+        print("\nMalicious:")
+        print(analysis["malicious"])
+
+
+        print("\nSuspicious:")
+        print(analysis["suspicious"])
+
+
+        print("\nHarmless:")
+        print(analysis["harmless"])
+
+
+        print("\nTimestamp:")
+        print(timestamp)
+
+
+        print("=========================")
 
 
 
