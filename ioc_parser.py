@@ -1,5 +1,5 @@
 import re
-
+import ipaddress
 
 def identify_ioc_type(ioc):
     """
@@ -22,15 +22,14 @@ def identify_ioc_type(ioc):
         return "Unknown"
 
 
-
 def validate_ip(ioc):
-    """
-    Validate IPv4 addresses.
-    """
 
-    pattern = r"^(?:\d{1,3}\.){3}\d{1,3}$"
+    try:
+        ipaddress.ip_address(ioc)
+        return True
 
-    return bool(re.match(pattern, ioc))
+    except ValueError:
+        return False
 
 
 
