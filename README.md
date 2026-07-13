@@ -25,6 +25,14 @@ Each IOC is classified as:
 - Malicious
 based on VirusTotal detection results.
 
+## IOC Normalization
+
+The scanner automatically cleans IOC input by:
+
+- Removing extra spaces
+- Converting input to lowercase
+- Cleaning URL formatting
+
 ## Batch IOC Scanning
 The scanner can process multiple IOCs from a file: sample_IOCs.txt
 This allows faster investigation of multiple indicators, similar to SOC analyst workflows.

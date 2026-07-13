@@ -566,5 +566,29 @@
         "suspicious": 0,
         "harmless": 63,
         "timestamp": "2026-07-13 00:15:51"
+    },
+    {
+        "ioc": "8.8.8.8",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 55,
+        "timestamp": "2026-07-13 00:18:51"
+    },
+    {
+        "ioc": "google.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 63,
+        "timestamp": "2026-07-13 00:18:52"
+    },
+    {
+        "ioc": "https://google.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 65,
+        "timestamp": "2026-07-13 00:18:53"
     }
 ]
