@@ -526,5 +526,45 @@
         "suspicious": 0,
         "harmless": 0,
         "timestamp": "2026-07-12 00:55:31"
+    },
+    {
+        "ioc": "8.8.8.8",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 54,
+        "timestamp": "2026-07-13 00:15:47"
+    },
+    {
+        "ioc": "google.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 63,
+        "timestamp": "2026-07-13 00:15:48"
+    },
+    {
+        "ioc": "https://microsoft.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 61,
+        "timestamp": "2026-07-13 00:15:49"
+    },
+    {
+        "ioc": "44d88612fea8a8f36de82e1278abb02f",
+        "status": "Malicious",
+        "malicious": 66,
+        "suspicious": 0,
+        "harmless": 0,
+        "timestamp": "2026-07-13 00:15:49"
+    },
+    {
+        "ioc": "google.com",
+        "status": "Clean",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 63,
+        "timestamp": "2026-07-13 00:15:51"
     }
 ]

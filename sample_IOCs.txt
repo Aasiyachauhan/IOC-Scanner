@@ -1,7 +1,6 @@
 8.8.8.8
-1.1.1.1
 google.com
 https://microsoft.com
 44d88612fea8a8f36de82e1278abb02f
 564.yup
-999.999.999.999
+GOOGLE.COM

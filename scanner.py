@@ -4,7 +4,7 @@ from ioc_reader import read_iocs
 from ioc_router import scan_ioc
 from ioc_parser import identify_ioc_type
 from datetime import datetime
-
+from utils import normalize_ioc
 
 def main():
 
@@ -12,7 +12,7 @@ def main():
 
 
     for ioc in iocs:
-
+        ioc = normalize_ioc(ioc)
         ioc_type = identify_ioc_type(ioc)
 
 
