@@ -87,9 +87,16 @@ def analyze_result(data):
     else:
         status = "Clean"
 
+    risk_score = calculate_risk(malicious, suspicious)
+    risk_level = get_risk_level(risk_score)
+
+
+
     return {
 
         "status": status,
+        "risk_score": risk_score,
+        "risk_level": risk_level,
         "malicious": malicious,
         "suspicious": suspicious,
         "harmless": harmless
