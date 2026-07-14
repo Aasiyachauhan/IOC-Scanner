@@ -8,6 +8,8 @@ def save_result(ioc, result):
     log_entry = {
         "ioc": ioc,
         "status": result["status"],
+        "risk_score": result["risk_score"],
+        "risk_level": result["risk_level"],
         "malicious": result["malicious"],
         "suspicious": result["suspicious"],
         "harmless": result["harmless"],
