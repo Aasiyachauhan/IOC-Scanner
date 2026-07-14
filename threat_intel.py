@@ -118,3 +118,21 @@ def analyze_result(data):
         "harmless": harmless
 
     }
+
+def calculate_risk(malicious, suspicious):
+    """
+    Calculate IOC risk score.
+    Malicious detections have higher weight
+    than suspicious detections.
+    """
+
+    score = (malicious * 10) + (suspicious * 5)
+
+
+    # Maximum score is 100
+
+    if score > 100:
+        score = 100
+
+
+    return score
