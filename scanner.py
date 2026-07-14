@@ -68,6 +68,12 @@ def main():
         print("\nRisk:")
         print(analysis["status"])
 
+        print("\nRisk Score:")
+        print(analysis["risk_score"])
+
+        print("\nRisk Level:")
+        print(analysis["risk_level"])
+
 
         print("\nMalicious:")
         print(analysis["malicious"])
