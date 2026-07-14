@@ -37,11 +37,16 @@ The scanner automatically cleans IOC input by:
 The scanner can process multiple IOCs from a file: sample_IOCs.txt
 This allows faster investigation of multiple indicators, similar to SOC analyst workflows.
 
-## Major Updates
-API error handling
-Supported IOC types
-Validation
-Report output
+## Risk Scoring
+The scanner calculates IOC risk using VirusTotal detection results.
+Risk levels:
+
+- Low
+- Medium
+- High
+
+Risk scores are stored in scan reports.
+
 
 ## Security Logging
 Scan results are automatically stored in JSON format.
@@ -54,6 +59,14 @@ Logs include:
 Example log file:
 logs/
 └── scan_results.json
+
+
+## Major Updates
+API error handling
+Supported IOC types
+Validation
+Report output
+Risk scoring
 
 # Usage
 
