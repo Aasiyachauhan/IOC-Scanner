@@ -6,18 +6,22 @@ from ioc_parser import identify_ioc_type
 from datetime import datetime
 from utils import normalize_ioc
 
+
 def main():
 
     iocs = read_iocs("sample_IOCs.txt")
 
+    clean_count = 0
+    suspicious_count = 0
+    malicious_count = 0
+
 
     for ioc in iocs:
+
         ioc = normalize_ioc(ioc)
         ioc_type = identify_ioc_type(ioc)
 
-
         result = scan_ioc(ioc)
-
 
         if "error" in result:
 
@@ -29,8 +33,8 @@ def main():
             print("\nScan Error:")
             print(result["error"])
             print("=========================")
-            continue
 
+            continue
 
         if "data" not in result:
 
@@ -41,17 +45,23 @@ def main():
             print(ioc)
             print("\nUnable to analyze IOC")
             print("=========================")
-            continue
 
+            continue
 
         analysis = analyze_result(result)
 
+        if analysis["status"] == "Clean":
+            clean_count += 1
+
+        elif analysis["status"] == "Suspicious":
+            suspicious_count += 1
+
+        elif analysis["status"] == "Malicious":
+            malicious_count += 1
 
         save_result(ioc, analysis)
 
-
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
 
         print("\n=========================")
         print("IOC Scan Report")
@@ -60,10 +70,8 @@ def main():
         print("\nIndicator:")
         print(ioc)
 
-
         print("\nType:")
         print(ioc_type)
-
 
         print("\nRisk:")
         print(analysis["status"])
@@ -74,25 +82,38 @@ def main():
         print("\nRisk Level:")
         print(analysis["risk_level"])
 
-
         print("\nMalicious:")
         print(analysis["malicious"])
-
 
         print("\nSuspicious:")
         print(analysis["suspicious"])
 
-
         print("\nHarmless:")
         print(analysis["harmless"])
-
 
         print("\nTimestamp:")
         print(timestamp)
 
-
         print("=========================")
 
+    # Summary Section
+
+    total_scanned = (
+        clean_count +
+        suspicious_count +
+        malicious_count
+    )
+
+    print("\n===================================")
+    print("Scan Summary")
+    print("===================================")
+
+    print("Total IOCs Scanned:", total_scanned)
+    print("Clean:", clean_count)
+    print("Suspicious:", suspicious_count)
+    print("Malicious:", malicious_count)
+
+    print("===================================")
 
 
 if __name__ == "__main__":
