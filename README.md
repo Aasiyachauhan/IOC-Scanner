@@ -44,29 +44,61 @@ Risk levels:
 - Low
 - Medium
 - High
-
 Risk scores are stored in scan reports.
 
+Risk information includes:
+
+- Risk score
+- Risk level
+- Detection counts
+
+## IOC Analytics and Reporting
+The scanner provides investigation summaries including:
+### Scan summary
+Example: 
+===================================
+Scan Summary
+Total IOCs Scanned: 10
+Clean: 6
+Suspicious: 3
+Malicious: 1
+
+### IOC Type Distribution
+Example:
+IOC Type Distribution
+
+IP Address: 4
+Domain: 3
+URL: 2
+File Hash: 1
+Unknown: 0
+This provides visibility into the types of indicators being analyzed.
+
+## Error Handling
+
+The scanner handles:
+
+- Invalid IOCs
+- VirusTotal API failures
+- Network errors
+- Unsupported IOC types
+
+The program continues scanning remaining indicators instead of stopping.
 
 ## Security Logging
 Scan results are automatically stored in JSON format.
 Logs include:
 - IOC value
+- IOC type
 - Threat classification
+- Risk score
+- Risk level
 - Malicious detections
 - Suspicious detections
 - Timestamp
 Example log file:
 logs/
 └── scan_results.json
-
-
-## Major Updates
-API error handling
-Supported IOC types
-Validation
-Report output
-Risk scoring
 
 # Usage
 
@@ -88,3 +120,5 @@ logs/scan_results.json
 - VirusTotal API
 - JSON Logging
 - Regular Expressions
+- IP Address Validation
+- Base64 URL Encoding
