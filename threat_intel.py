@@ -99,7 +99,9 @@ def analyze_result(data):
         "risk_level": risk_level,
         "malicious": malicious,
         "suspicious": suspicious,
-        "harmless": harmless
+        "harmless": harmless,
+        "risk_score": risk_score,
+        "risk_level": risk_level
 
     }
 

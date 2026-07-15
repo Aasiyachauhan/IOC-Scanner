@@ -13,7 +13,9 @@ def save_result(ioc, result):
         "malicious": result["malicious"],
         "suspicious": result["suspicious"],
         "harmless": result["harmless"],
-        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "risk_score": result["risk_score"],
+        "risk_level": result["risk_level"],
     }
 
     log_file = "logs/scan_results.json"
