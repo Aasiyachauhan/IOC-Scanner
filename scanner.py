@@ -15,11 +15,20 @@ def main():
     suspicious_count = 0
     malicious_count = 0
 
+    ioc_stats = {
+        "IP Address": 0,
+        "Domain": 0,
+        "URL": 0,
+        "File Hash": 0,
+        "Unknown": 0
+    }
+
 
     for ioc in iocs:
 
         ioc = normalize_ioc(ioc)
         ioc_type = identify_ioc_type(ioc)
+        ioc_stats[ioc_type] += 1
 
         result = scan_ioc(ioc)
 
@@ -115,6 +124,11 @@ def main():
 
     print("===================================")
 
+    print("\nIOC Type Distribution")
+    print("======================")
+
+    for ioc_type, count in ioc_stats.items():
+        print(f"{ioc_type}: {count}")
 
 if __name__ == "__main__":
     main()
