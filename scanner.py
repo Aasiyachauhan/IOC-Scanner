@@ -5,7 +5,7 @@ from ioc_router import scan_ioc
 from ioc_parser import identify_ioc_type
 from datetime import datetime
 from utils import normalize_ioc
-
+from report_generator import export_to_csv
 
 def main():
 
@@ -130,5 +130,8 @@ def main():
     for ioc_type, count in ioc_stats.items():
         print(f"{ioc_type}: {count}")
 
+        print("===================================")
+        export_to_csv()
+        
 if __name__ == "__main__":
     main()

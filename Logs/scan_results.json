@@ -794,5 +794,65 @@
         "suspicious": 0,
         "harmless": 64,
         "timestamp": "2026-07-15 01:52:35"
+    },
+    {
+        "ioc": "8.8.8.8",
+        "status": "Clean",
+        "risk_score": 0,
+        "risk_level": "Low",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 54,
+        "timestamp": "2026-07-16 04:39:00"
+    },
+    {
+        "ioc": "google.com",
+        "status": "Clean",
+        "risk_score": 0,
+        "risk_level": "Low",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 61,
+        "timestamp": "2026-07-16 04:39:00"
+    },
+    {
+        "ioc": "https://google.com",
+        "status": "Clean",
+        "risk_score": 0,
+        "risk_level": "Low",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 63,
+        "timestamp": "2026-07-16 04:39:01"
+    },
+    {
+        "ioc": "8.8.8.8",
+        "status": "Clean",
+        "risk_score": 0,
+        "risk_level": "Low",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 54,
+        "timestamp": "2026-07-16 04:40:27"
+    },
+    {
+        "ioc": "google.com",
+        "status": "Clean",
+        "risk_score": 0,
+        "risk_level": "Low",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 61,
+        "timestamp": "2026-07-16 04:40:28"
+    },
+    {
+        "ioc": "https://google.com",
+        "status": "Clean",
+        "risk_score": 0,
+        "risk_level": "Low",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 63,
+        "timestamp": "2026-07-16 04:40:29"
     }
 ]
