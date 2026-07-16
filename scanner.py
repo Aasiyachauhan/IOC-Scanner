@@ -1,3 +1,4 @@
+import sys
 from threat_intel import analyze_result
 from logger import save_result
 from ioc_reader import read_iocs
@@ -9,7 +10,13 @@ from report_generator import export_to_csv
 
 def main():
 
-    iocs = read_iocs("sample_IOCs.txt")
+    if len(sys.argv) > 1:
+        input_file = sys.argv[1]
+        
+    else:
+        input_file = "sample_IOCs.txt"
+        
+    iocs = read_iocs(input_file)
 
     clean_count = 0
     suspicious_count = 0
@@ -132,6 +139,6 @@ def main():
 
         print("===================================")
         export_to_csv()
-        
+
 if __name__ == "__main__":
     main()
