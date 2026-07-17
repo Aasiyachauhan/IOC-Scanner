@@ -28,7 +28,6 @@ based on VirusTotal detection results.
 ## IOC Normalization
 
 The scanner automatically cleans IOC input by:
-
 - Removing extra spaces
 - Converting input to lowercase
 - Cleaning URL formatting
@@ -36,6 +35,14 @@ The scanner automatically cleans IOC input by:
 ## Batch IOC Scanning
 The scanner can process multiple IOCs from a file: sample_IOCs.txt
 This allows faster investigation of multiple indicators, similar to SOC analyst workflows.
+
+## Command Line Input Support
+The scanner supports custom IOC input files through command line arguments.
+
+Example:
+python scanner.py sample_IOCs.txt
+or
+python scanner.py custom_IOCs.txt
 
 ## Risk Scoring
 The scanner calculates IOC risk using VirusTotal detection results.
