@@ -81,6 +81,12 @@ File Hash: 1
 Unknown: 0
 This provides visibility into the types of indicators being analyzed.
 
+### Scan Performance Metrics
+The scanner measures total scan execution time to provide performance visibility.
+
+Example:
+Scan completed in 4.27 seconds
+
 ## Error Handling
 
 The scanner handles:
@@ -89,6 +95,7 @@ The scanner handles:
 - VirusTotal API failures
 - Network errors
 - Unsupported IOC types
+- Connection timeouts
 
 The program continues scanning remaining indicators instead of stopping.
 
@@ -106,6 +113,24 @@ Logs include:
 Example log file:
 logs/
 └── scan_results.json
+
+## CSV Report Export
+
+The scanner can export results to CSV format for analysis in Excel or SIEM reporting workflows.
+
+Generated report:
+logs/
+└── scan_results.csv
+
+- CSV reports include:
+- IOC value
+- IOC type
+- Status
+- Risk score
+- Risk level
+- Detection counts
+- Timestamp
+
 
 # Usage
 
@@ -129,3 +154,19 @@ logs/scan_results.json
 - Regular Expressions
 - IP Address Validation
 - Base64 URL Encoding
+
+# Current Capabilities
+
+Multi-IOC scanning
+IP, Domain, URL, and Hash detection
+VirusTotal threat intelligence lookups
+IOC normalization
+IOC validation
+Risk scoring
+Batch scanning
+JSON logging
+CSV export
+Command line input support
+Scan performance metrics
+IOC analytics and reporting
+Error handling
