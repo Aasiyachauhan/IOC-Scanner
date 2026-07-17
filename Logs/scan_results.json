@@ -874,5 +874,15 @@
         "suspicious": 0,
         "harmless": 56,
         "timestamp": "2026-07-16 04:45:28"
+    },
+    {
+        "ioc": "10.0.0.1",
+        "status": "Clean",
+        "risk_score": 0,
+        "risk_level": "Low",
+        "malicious": 0,
+        "suspicious": 0,
+        "harmless": 56,
+        "timestamp": "2026-07-17 01:23:21"
     }
 ]

@@ -1,4 +1,5 @@
 import sys
+import time
 from threat_intel import analyze_result
 from logger import save_result
 from ioc_reader import read_iocs
@@ -9,6 +10,7 @@ from utils import normalize_ioc
 from report_generator import export_to_csv
 
 def main():
+    start_time = time.time()
 
     if len(sys.argv) > 1:
         input_file = sys.argv[1]
@@ -139,6 +141,14 @@ def main():
 
         print("===================================")
         export_to_csv()
+
+    end_time = time.time()
+
+    print(
+        "\nScan completed in",
+        round(end_time - start_time, 2),
+        "seconds"
+    )
 
 if __name__ == "__main__":
     main()
