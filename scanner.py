@@ -8,6 +8,7 @@ from ioc_parser import identify_ioc_type
 from datetime import datetime
 from utils import normalize_ioc
 from report_generator import export_to_csv
+from report_generator import generate_html_report
 
 def main():
     start_time = time.time()
@@ -139,8 +140,9 @@ def main():
     for ioc_type, count in ioc_stats.items():
         print(f"{ioc_type}: {count}")
 
-        print("===================================")
-        export_to_csv()
+    print("===================================")
+    export_to_csv()
+    generate_html_report()
 
     end_time = time.time()
 
