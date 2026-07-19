@@ -131,6 +131,26 @@ logs/
 - Detection counts
 - Timestamp
 
+## HTML Security Report
+
+The scanner generates an HTML report for easy viewing in any web browser.
+
+Generated file:
+```
+logs/
+└── security_report.html
+```
+
+The report includes:
+- Report generation timestamp
+- Scan summary
+- Total IOC count
+- Clean, Suspicious, and Malicious totals
+- IOC details table
+- Risk scores
+- Risk levels
+- Detection statistics
+- Improved HTML formatting for easier analysis
 
 # Usage
 

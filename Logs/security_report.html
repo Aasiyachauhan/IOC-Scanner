@@ -1,36 +1,121 @@
 
     <html>
     <head>
-        <title>IOC Scanner Report</title>
+        <title>IOC Scanner Security Report</title>
+
+        <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #1f2937;
+        }
+
+        .summary {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background: white;
+        }
+
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #374151;
+            color: white;
+        }
+
+        .clean {
+            color: green;
+            font-weight: bold;
+        }
+
+        .suspicious {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .malicious {
+            color: red;
+            font-weight: bold;
+        }
+
+        </style>
     </head>
 
     <body>
 
     <h1>IOC Scanner Security Report</h1>
 
-    <p>Generated: 2026-07-18 09:47:53</p>
+    <p><strong>Generated:</strong> 2026-07-19 01:15:34</p>
 
-    <table border="1">
-        <tr>
-            <th>IOC</th>
-            <th>Status</th>
-            <th>Risk Score</th>
-            <th>Risk Level</th>
-            <th>Malicious</th>
-            <th>Suspicious</th>
-            <th>Harmless</th>
-        </tr>
+    <div class="summary">
+
+    <h2>Summary</h2>
+
+    <p><strong>Total Scanned:</strong> 2</p>
+    <p><strong>Clean:</strong> 2</p>
+    <p><strong>Suspicious:</strong> 0</p>
+    <p><strong>Malicious:</strong> 0</p>
+
+    </div>
+
+    <h2>IOC Details</h2>
+
+    <table>
+
+    <tr>
+        <th>IOC</th>
+        <th>Status</th>
+        <th>Risk Score</th>
+        <th>Risk Level</th>
+        <th>Malicious</th>
+        <th>Suspicious</th>
+        <th>Harmless</th>
+        <th>Timestamp</th>
+    </tr>
     
+
         <tr>
             <td>10.0.0.1</td>
-            <td>Clean</td>
+            <td class="clean">Clean</td>
             <td>0</td>
             <td>Low</td>
             <td>0</td>
             <td>0</td>
             <td>56</td>
+            <td>2026-07-18 09:47:53</td>
         </tr>
+
         
+
+        <tr>
+            <td>10.0.0.1</td>
+            <td class="clean">Clean</td>
+            <td>0</td>
+            <td>Low</td>
+            <td>0</td>
+            <td>0</td>
+            <td>57</td>
+            <td>2026-07-19 01:15:34</td>
+        </tr>
+
+        
+
     </table>
 
     </body>
