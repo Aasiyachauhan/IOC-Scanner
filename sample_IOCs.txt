@@ -1,3 +1,1 @@
 8.8.8.8
-GOOGLE.COM
- HTTPS://Google.com/

@@ -132,3 +132,33 @@ def get_risk_level(score):
 
     else:
         return "Low"
+
+def extract_enrichment(data):
+
+    if "data" not in data:
+        return {
+            "country": "Unknown",
+            "asn": "Unknown",
+            "owner": "Unknown"
+        }
+
+
+    attributes = data["data"]["attributes"]
+
+
+    return {
+        "country": attributes.get(
+            "country",
+            "Unknown"
+        ),
+
+        "asn": attributes.get(
+            "asn",
+            "Unknown"
+        ),
+
+        "owner": attributes.get(
+            "as_owner",
+            "Unknown"
+        )
+    }
