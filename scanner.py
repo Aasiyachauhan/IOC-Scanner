@@ -9,7 +9,7 @@ from datetime import datetime
 from utils import normalize_ioc
 from report_generator import export_to_csv
 from report_generator import generate_html_report
-
+from threat_intel import extract_enrichment
 def main():
     start_time = time.time()
 
@@ -68,6 +68,7 @@ def main():
             continue
 
         analysis = analyze_result(result)
+        enrichment = extract_enrichment(result)
 
         if analysis["status"] == "Clean":
             clean_count += 1
@@ -112,6 +113,16 @@ def main():
 
         print("\nTimestamp:")
         print(timestamp)
+
+        print("\nCountry:")
+        print(enrichment["country"])
+
+
+        print("\nASN:")
+        print(enrichment["asn"])
+
+        print("\nOwner:")
+        print(enrichment["owner"])
 
         print("=========================")
 
