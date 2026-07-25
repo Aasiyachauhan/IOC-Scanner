@@ -25,6 +25,18 @@ Each IOC is classified as:
 - Malicious
 based on VirusTotal detection results.
 
+## IOC Enrichment
+
+The scanner extracts additional threat intelligence information from VirusTotal to provide more investigation context.
+
+Enrichment information includes:
+
+- Country
+- ASN (Autonomous System Number)
+- Network Owner (AS Owner)
+
+When available, these details are displayed in reports and stored in scan logs.
+
 ## IOC Normalization
 
 The scanner automatically cleans IOC input by:
@@ -146,11 +158,14 @@ The report includes:
 - Scan summary
 - Total IOC count
 - Clean, Suspicious, and Malicious totals
-- IOC details table
-- Risk scores
-- Risk levels
+- IOC enrichment details
+- Country
+- ASN
+- Network owner
+- Risk score
+- Risk level
 - Detection statistics
-- Improved HTML formatting for easier analysis
+- Styled investigation table
 
 # Usage
 
@@ -159,6 +174,11 @@ Add IOCs to sample_IOCs.txt
 Run:
 ```bash
 python scanner.py
+```
+
+Or specify a custom input file:
+```bash
+python scanner.py custom_IOCs.txt
 ```
 
 Results are saved automatically:
