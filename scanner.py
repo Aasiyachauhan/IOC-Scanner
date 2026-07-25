@@ -79,7 +79,7 @@ def main():
         elif analysis["status"] == "Malicious":
             malicious_count += 1
 
-        save_result(ioc, analysis)
+        save_result(ioc, analysis, enrichment)
 
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 

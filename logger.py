@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 
 
-def save_result(ioc, result):
+def save_result(ioc, result, enrichment):
 
     log_entry = {
         "ioc": ioc,
@@ -16,6 +16,9 @@ def save_result(ioc, result):
         "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "risk_score": result["risk_score"],
         "risk_level": result["risk_level"],
+        "country": enrichment["country"],
+        "asn": enrichment["asn"],
+        "owner": enrichment["owner"]
     }
 
     log_file = "logs/scan_results.json"
