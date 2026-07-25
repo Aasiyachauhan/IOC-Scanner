@@ -14,6 +14,9 @@ def export_to_csv():
 
     fieldnames = [
         "ioc",
+        "country",
+        "asn",
+        "owner",
         "status",
         "risk_score",
         "risk_level",
@@ -46,8 +49,6 @@ def generate_html_report():
         print("No scan results available.")
         return
 
-    # Calculate summary statistics
-
     total = len(data)
 
     clean = 0
@@ -69,61 +70,64 @@ def generate_html_report():
 
     html = f"""
     <html>
+
     <head>
-        <title>IOC Scanner Security Report</title>
 
-        <style>
+    <title>IOC Scanner Security Report</title>
 
-        body {{
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f4;
-        }}
+    <style>
 
-        h1 {{
-            color: #1f2937;
-        }}
+    body {{
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: #f4f4f4;
+    }}
 
-        .summary {{
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }}
+    h1 {{
+        color: #1f2937;
+    }}
 
-        table {{
-            border-collapse: collapse;
-            width: 100%;
-            background: white;
-        }}
+    .summary {{
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    }}
 
-        th, td {{
-            border: 1px solid #d1d5db;
-            padding: 10px;
-            text-align: left;
-        }}
+    table {{
+        border-collapse: collapse;
+        width: 100%;
+        background: white;
+    }}
 
-        th {{
-            background-color: #374151;
-            color: white;
-        }}
+    th, td {{
+        border: 1px solid #d1d5db;
+        padding: 10px;
+        text-align: left;
+    }}
 
-        .clean {{
-            color: green;
-            font-weight: bold;
-        }}
+    th {{
+        background-color: #374151;
+        color: white;
+    }}
 
-        .suspicious {{
-            color: orange;
-            font-weight: bold;
-        }}
+    .clean {{
+        color: green;
+        font-weight: bold;
+    }}
 
-        .malicious {{
-            color: red;
-            font-weight: bold;
-        }}
+    .suspicious {{
+        color: orange;
+        font-weight: bold;
+    }}
 
-        </style>
+    .malicious {{
+        color: red;
+        font-weight: bold;
+    }}
+
+    </style>
+
     </head>
 
     <body>
@@ -149,6 +153,9 @@ def generate_html_report():
 
     <tr>
         <th>IOC</th>
+        <th>Country</th>
+        <th>ASN</th>
+        <th>Owner</th>
         <th>Status</th>
         <th>Risk Score</th>
         <th>Risk Level</th>
@@ -173,9 +180,11 @@ def generate_html_report():
             status_class = "malicious"
 
         html += f"""
-
         <tr>
             <td>{result.get("ioc", "N/A")}</td>
+            <td>{result.get("country", "N/A")}</td>
+            <td>{result.get("asn", "N/A")}</td>
+            <td>{result.get("owner", "N/A")}</td>
             <td class="{status_class}">{status}</td>
             <td>{result.get("risk_score", "N/A")}</td>
             <td>{result.get("risk_level", "N/A")}</td>
@@ -184,14 +193,13 @@ def generate_html_report():
             <td>{result.get("harmless", 0)}</td>
             <td>{result.get("timestamp", "N/A")}</td>
         </tr>
-
         """
 
     html += """
-
     </table>
 
     </body>
+
     </html>
     """
 
@@ -199,3 +207,8 @@ def generate_html_report():
         file.write(html)
 
     print("HTML report generated successfully.")
+
+
+if __name__ == "__main__":
+    export_to_csv()
+    generate_html_report()
