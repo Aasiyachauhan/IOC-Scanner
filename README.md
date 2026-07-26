@@ -111,14 +111,15 @@ The scanner handles:
 
 The program continues scanning remaining indicators instead of stopping.
 
-## Security Logging
-Scan results are automatically stored in JSON format.
-Logs include:
+## Logs include:
 - IOC value
 - IOC type
 - Threat classification
 - Risk score
 - Risk level
+- Country
+- ASN
+- Network Owner
 - Malicious detections
 - Suspicious detections
 - Timestamp
@@ -140,6 +141,9 @@ logs/
 - Status
 - Risk score
 - Risk level
+- Country
+- ASN
+- Network Owner
 - Detection counts
 - Timestamp
 
@@ -158,14 +162,14 @@ The report includes:
 - Scan summary
 - Total IOC count
 - Clean, Suspicious, and Malicious totals
-- IOC enrichment details
+- IOC details table
 - Country
 - ASN
-- Network owner
+- Network Owner
 - Risk score
 - Risk level
 - Detection statistics
-- Styled investigation table
+- Styled investigation dashboard
 
 # Usage
 
@@ -191,22 +195,26 @@ logs/scan_results.json
 - Requests
 - VirusTotal API
 - JSON Logging
+- CSV Reporting
+- HTML Reporting
 - Regular Expressions
 - IP Address Validation
 - Base64 URL Encoding
 
 # Current Capabilities
 
-Multi-IOC scanning
-IP, Domain, URL, and Hash detection
-VirusTotal threat intelligence lookups
-IOC normalization
-IOC validation
-Risk scoring
-Batch scanning
-JSON logging
-CSV export
-Command line input support
-Scan performance metrics
-IOC analytics and reporting
-Error handling
+- Multi-IOC scanning
+- IP, Domain, URL, and Hash detection
+- Threat intelligence lookups
+- IOC enrichment (Country, ASN, Network Owner)
+- IOC normalization
+- IOC validation
+- Risk scoring
+- Batch scanning
+- JSON logging
+- CSV export
+- HTML security reports
+- Command line input support
+- Scan performance metrics
+- IOC analytics and reporting
+- Error handling
